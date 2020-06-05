@@ -1,5 +1,5 @@
 package com.leetcode.arrays.insertion;
-
+//Leetcode-1089
 public class DuplicateZeros {
 	public static void main(String args[]){
 		int array[] = new int[]{0,0,0,0,0,0,0};

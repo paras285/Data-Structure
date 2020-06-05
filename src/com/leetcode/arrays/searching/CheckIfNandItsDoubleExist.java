@@ -1,7 +1,7 @@
 package com.leetcode.arrays.searching;
 
 import java.util.HashSet;
-
+//Leetcode-346
 public class CheckIfNandItsDoubleExist {
 
 	public static void main(String[] args) {
