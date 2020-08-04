@@ -21,7 +21,7 @@ public class SquaresOfSortedArray {
 		/**
 		 * Second approach
 		 */
-		int start = 0,end = array.length-1,tempIndex= array.length-1;
+		/*int start = 0,end = array.length-1,tempIndex= array.length-1;
 		int tempArray[] = new int[array.length];
 		
 		while(start<=end){
@@ -34,7 +34,20 @@ public class SquaresOfSortedArray {
 			}
 		}
 		
-		return tempArray;
+		return tempArray;*/
+		int left = 0,right = array.length-1;
+		while(left<right){
+			if(Math.abs(array[left])> Math.abs(array[right])){
+				int temp = array[right];
+				int product = array[left] * array[left];
+				array[right--] = product;
+				array[left] = temp;
+			}else{
+				int product = array[right] * array[right];
+				array[right--] = product;
+			}
+		}
+		return array;
         
     }
 }

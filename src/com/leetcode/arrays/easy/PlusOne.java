@@ -2,7 +2,7 @@ package com.leetcode.arrays.easy;
 //Leetcode-66
 public class PlusOne {
 	public static void main(String args[]){
-		int number[] = new int[]{9};
+		int number[] = new int[]{9,9};
 		int tempArray[] = plusOneToInteger(number);
 		for(int index=0; index<tempArray.length; index++){
 			System.out.print(tempArray[index]);
@@ -15,12 +15,15 @@ public class PlusOne {
 			if(array[index] == 9){
 				array[index] =0;
 		}else{
-			int number = array[index]+carry;
+			array[index] = array[index]+carry;
+			carry =0;
+			break;
+			/*int number = array[index]+carry;
 			if(number%10 !=0){
 				array[index] = number;
 				carry =0;
 				break;
-			}
+			}*/
 		}
 	}
 		if(carry!=0){

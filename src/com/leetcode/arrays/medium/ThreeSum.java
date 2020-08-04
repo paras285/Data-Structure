@@ -1,8 +1,10 @@
 package com.leetcode.arrays.medium;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 /*
  *	Leetcode-15
@@ -10,14 +12,14 @@ import java.util.List;
 public class ThreeSum {
 
 	public static void main(String args[]){
-		int array[] = new int[]{-1, -2,3};
+		int array[] = new int[]{0,0,0,0};
 //		int element  = 5;
 //		findElements(array,0);
 		findElementUsingTwoPointers(array);
 		}
 
 	private static void findElementUsingTwoPointers(int[] array) {
-		List<List<Integer>> list = new LinkedList<>();
+		Set<List<Integer>> list = new HashSet();
 		Arrays.sort(array);
 		for(int index = 0; index<array.length-2; index++){
 			int firstElement = array[index];
@@ -36,6 +38,7 @@ public class ThreeSum {
 				}
 			}
 		}
+		
 	}
 
 	/*private static void findElements(int[] array, int element) {
